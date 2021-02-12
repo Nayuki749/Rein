@@ -2,6 +2,6 @@
   "token": "ここにBotのトークンを貼り付け",
   "device_read": "ライン (Yamaha SYNCROOM Driver (WDM))",
   "device_sound_effect": "ライン (Yamaha SYNCROOM Driver (WDM))",
-  "bouyomichan_path": "",
+  "bouyomichan_path": "C:\\Program Files\\BouyomiChan\\BouyomiChan.exe",
   "plugins_dir": "plugins"
 }
