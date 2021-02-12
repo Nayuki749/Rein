@@ -1,11 +1,11 @@
-﻿# Rein
+# Rein
+Discord Bot
 
 ![Rein](img/Rein.png)
 
 ## 概要
 
 Discordのテキストチャンネルに投稿された文章を[棒読みちゃん](http://chi.usamimi.info/Program/Application/BouyomiChan/)で読み上げ、その音声をボイスチャンネルに流すbotプログラムです。
-
 
 ## 動作環境
 
@@ -81,6 +81,11 @@ Reinではまず、棒読みちゃんの音声を「スピーカーのフリ」�
 * Rein本体およびRein付属のプラグインは、営利／非営利目的を問わず、無料で利用できます。
 * Reinから[棒読みちゃん](http://chi.usamimi.info/Program/Application/BouyomiChan/)、[NETDUETTO](https://www.netduetto.net/)、もしくはその他のソフトウェアを利用する場合は、それらのソフトウェアの利用規約が適用されます。各ソフトウェアの利用規約をご確認ください。
 
+### Rein 0.4.2 以前について
+
+Rein 0.4.2 以前において、内部で使用している[BASS audio library](https://www.un4seen.com/)および[BASS.NET](http://bass.radio42.com/)は、非営利目的での利用に限り無償提供されています。そのため、Rein 0.4.2 以前を営利目的で利用することはできません。
+
+
 ## 権利表記
 
 ### ライブラリ、参考
@@ -95,4 +100,3 @@ Reinではまず、棒読みちゃんの音声を「スピーカーのフリ」�
 * [NGettext](https://github.com/neris/NGettext) ([MIT License](https://github.com/neris/NGettext/blob/master/LICENSE))
 * [opas.dll - Opus Interactive Audio Codec](http://opus-codec.org/) ([three-clause BSD license](http://opus-codec.org/license/))
 * [Discord-Audio-Stream-Bot](https://github.com/BinkanSalaryman/Discord-Audio-Stream-Bot) （参考にさせていただいたコード）
-
