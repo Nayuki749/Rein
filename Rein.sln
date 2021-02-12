@@ -4,6 +4,59 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 15.0.28307.1382
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Rein", "Rein\Rein.csproj", "{C9540F35-61F7-4248-9EB8-32F30AFC593A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{8C84B21B-2C0B-4E13-92CE-254291B61ED0} = {8C84B21B-2C0B-4E13-92CE-254291B61ED0}
+		{6B50FE23-1193-4862-AF82-C2068F0C9F3C} = {6B50FE23-1193-4862-AF82-C2068F0C9F3C}
+		{B158ED27-9E96-4669-885D-423A4BB6C48A} = {B158ED27-9E96-4669-885D-423A4BB6C48A}
+		{0330FD98-8B39-49B9-91EA-94B2A38A9D46} = {0330FD98-8B39-49B9-91EA-94B2A38A9D46}
+		{1BA397BD-D699-4635-BA62-9DF5E5FA80A3} = {1BA397BD-D699-4635-BA62-9DF5E5FA80A3}
+		{E23BF2D8-1E69-42B9-9FE1-7C34E523190D} = {E23BF2D8-1E69-42B9-9FE1-7C34E523190D}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicPlugins", "BasicPlugins\BasicPlugins.csproj", "{E23BF2D8-1E69-42B9-9FE1-7C34E523190D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Boyhomichan", "Boyhomichan\Boyhomichan.csproj", "{1BA397BD-D699-4635-BA62-9DF5E5FA80A3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Options", "Options\Options.csproj", "{B158ED27-9E96-4669-885D-423A4BB6C48A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PluginInterface", "PluginInterface\PluginInterface.csproj", "{0330FD98-8B39-49B9-91EA-94B2A38A9D46}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoundEffectPlugin", "SoundEffectPlugin\SoundEffectPlugin.csproj", "{8C84B21B-2C0B-4E13-92CE-254291B61ED0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserDefinedFilterPlugin", "UserDefinedFilterPlugin\UserDefinedFilterPlugin.csproj", "{89312036-0CCE-4C68-BE08-9D3A255EFCB3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UserDefinedSchedulerPlugin", "UserDefinedSchedulerPlugin\UserDefinedSchedulerPlugin.csproj", "{30F2B73E-C6D1-4A71-828A-40420F37598A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility", "Utility\Utility.csproj", "{6B50FE23-1193-4862-AF82-C2068F0C9F3C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "dist_files", "dist_files", "{13F14BE0-AEF0-4480-8393-8C2206C53560}"
+	ProjectSection(SolutionItems) = preProject
+		dist_files\config.default.json = dist_files\config.default.json
+		dist_files\Nursery.debug.cmd = dist_files\Nursery.debug.cmd
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "filters", "filters", "{5C2431C7-12B4-4462-ACB5-70AF86379ADB}"
+	ProjectSection(SolutionItems) = preProject
+		dist_files\filters\filters.json = dist_files\filters\filters.json
+		dist_files\filters\housou_kinshi_sample.json = dist_files\filters\housou_kinshi_sample.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "plugins", "plugins", "{77646BE7-56A1-45A3-AF58-912FB82692A8}"
+	ProjectSection(SolutionItems) = preProject
+		dist_files\plugins\plugins.json = dist_files\plugins\plugins.json
+		dist_files\plugins\Rein.BasicPlugins.AddNameFilter.json = dist_files\plugins\Rein.BasicPlugins.AddNameFilter.json
+		dist_files\plugins\Rein.BasicPlugins.ListFilter.json = dist_files\plugins\Rein.BasicPlugins.ListFilter.json
+		dist_files\plugins\Rein.BasicPlugins.LongMessageFilter.json = dist_files\plugins\Rein.BasicPlugins.LongMessageFilter.json
+		dist_files\plugins\Rein.SoundEffectPlugin.SoundEffectCommand.json = dist_files\plugins\Rein.SoundEffectPlugin.SoundEffectCommand.json
+		dist_files\plugins\Rein.UserDefinedFilterPlugin.UserDefinedFilter.json = dist_files\plugins\Rein.UserDefinedFilterPlugin.UserDefinedFilter.json
+		dist_files\plugins\Rein.UserDefinedSchedulerPlugin.UserDefinedScheduler.json = dist_files\plugins\Rein.UserDefinedSchedulerPlugin.UserDefinedScheduler.json
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "sounds", "sounds", "{22CD5058-371E-46E4-9F50-0BA411AAB78D}"
+	ProjectSection(SolutionItems) = preProject
+		dist_files\sounds\clapping_short2.json = dist_files\sounds\clapping_short2.json
+		dist_files\sounds\clapping_short2.mp3 = dist_files\sounds\clapping_short2.mp3
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +68,46 @@ Global
 		{C9540F35-61F7-4248-9EB8-32F30AFC593A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C9540F35-61F7-4248-9EB8-32F30AFC593A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C9540F35-61F7-4248-9EB8-32F30AFC593A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E23BF2D8-1E69-42B9-9FE1-7C34E523190D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E23BF2D8-1E69-42B9-9FE1-7C34E523190D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E23BF2D8-1E69-42B9-9FE1-7C34E523190D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E23BF2D8-1E69-42B9-9FE1-7C34E523190D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BA397BD-D699-4635-BA62-9DF5E5FA80A3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BA397BD-D699-4635-BA62-9DF5E5FA80A3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BA397BD-D699-4635-BA62-9DF5E5FA80A3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BA397BD-D699-4635-BA62-9DF5E5FA80A3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B158ED27-9E96-4669-885D-423A4BB6C48A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B158ED27-9E96-4669-885D-423A4BB6C48A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B158ED27-9E96-4669-885D-423A4BB6C48A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B158ED27-9E96-4669-885D-423A4BB6C48A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0330FD98-8B39-49B9-91EA-94B2A38A9D46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0330FD98-8B39-49B9-91EA-94B2A38A9D46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0330FD98-8B39-49B9-91EA-94B2A38A9D46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0330FD98-8B39-49B9-91EA-94B2A38A9D46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C84B21B-2C0B-4E13-92CE-254291B61ED0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C84B21B-2C0B-4E13-92CE-254291B61ED0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C84B21B-2C0B-4E13-92CE-254291B61ED0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C84B21B-2C0B-4E13-92CE-254291B61ED0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89312036-0CCE-4C68-BE08-9D3A255EFCB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89312036-0CCE-4C68-BE08-9D3A255EFCB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89312036-0CCE-4C68-BE08-9D3A255EFCB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89312036-0CCE-4C68-BE08-9D3A255EFCB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30F2B73E-C6D1-4A71-828A-40420F37598A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30F2B73E-C6D1-4A71-828A-40420F37598A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30F2B73E-C6D1-4A71-828A-40420F37598A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30F2B73E-C6D1-4A71-828A-40420F37598A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6B50FE23-1193-4862-AF82-C2068F0C9F3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B50FE23-1193-4862-AF82-C2068F0C9F3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B50FE23-1193-4862-AF82-C2068F0C9F3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B50FE23-1193-4862-AF82-C2068F0C9F3C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5C2431C7-12B4-4462-ACB5-70AF86379ADB} = {13F14BE0-AEF0-4480-8393-8C2206C53560}
+		{77646BE7-56A1-45A3-AF58-912FB82692A8} = {13F14BE0-AEF0-4480-8393-8C2206C53560}
+		{22CD5058-371E-46E4-9F50-0BA411AAB78D} = {13F14BE0-AEF0-4480-8393-8C2206C53560}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {825DEC69-1100-402D-AC81-329DE339F49A}

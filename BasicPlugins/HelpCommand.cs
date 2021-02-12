@@ -1,0 +1,65 @@
+﻿using System;
+using System.Linq;
+using Rein.Plugins;
+
+namespace Rein.BasicPlugins {
+	public class HelpCommand : AbstractMentionKeywordCommand {
+		public override string Name { get; } = "Rein.BasicPlugins.HelpCommand";
+		public override string HelpText { get => this.help_text; }
+
+		// TRANSLATORS: Bot-Help message. HelpText plugin.
+		private string help_text = T._("Show command and filter help.") + " ```@voice-bot help\n@voice-bot help-command\n@voice-bot help-filter\n@voice-bot help-scheduler```";
+		private string command_help = "";
+		private string filter_help = "";
+		private string scheduler_help = "";
+		private bool replaced = false;
+
+		public HelpCommand() : base(new string[] { "help-command", "help-filter", "help-scheduler", "help" }) { }
+
+		public override void Initialize(IPluginManager loader, IPlugin[] plugins) {
+			// TRANSLATORS: Bot message. HelpText plugin.
+			command_help = "\n" + T._("[COMMANDS]") + "\n" + String.Join("\n", plugins.Where(p => p.Type == Plugins.Type.Command).Select(p => {
+				return "* " + p.HelpText;
+			}).ToArray());
+			// TRANSLATORS: Bot message. HelpText plugin.
+			filter_help = "\n" + T._("[FILTERS]") + "\n" + String.Join("\n", plugins.Where(p => p.Type == Plugins.Type.Filter).Select(p => {
+				return "* " + p.HelpText;
+			}).ToArray());
+			// TRANSLATORS: Bot message. HelpText plugin.
+			scheduler_help = "\n" + T._("[SCHEDULERS]") + "\n" + String.Join("\n", plugins.Where(p => p.Type == Plugins.Type.Scheduler).Select(p => {
+				return "* " + p.HelpText;
+			}).ToArray());
+		}
+
+		protected override bool DoExecute(int keywordIndex, IBot bot, IMessage message) {
+			if (!replaced) {
+				var mn = bot.Username;
+				if (mn.Length > 0) {
+					this.command_help = this.command_help.Replace("voice-bot", mn);
+					this.filter_help = this.filter_help.Replace("voice-bot", mn);
+					this.scheduler_help = this.scheduler_help.Replace("voice-bot", mn);
+					this.help_text = this.help_text.Replace("voice-bot", mn);
+					this.replaced = true;
+				}
+			}
+			switch (keywordIndex) {
+				case 0:
+					bot.SendMessageAsync(message.Original.Channel, message.Original.Author, this.command_help, false);
+					break;
+				case 1:
+					bot.SendMessageAsync(message.Original.Channel, message.Original.Author, this.filter_help, false);
+					break;
+				case 2:
+					bot.SendMessageAsync(message.Original.Channel, message.Original.Author, this.scheduler_help, false);
+					break;
+				case 3:
+					bot.SendMessageAsync(message.Original.Channel, message.Original.Author, this.HelpText, false);
+					break;
+			}
+			message.Content = "";
+			message.Terminated = true;
+			message.AppliedPlugins.Add(this.Name);
+			return true;
+		}
+	}
+}
