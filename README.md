@@ -72,6 +72,7 @@ config.jsonファイルのtokenにBOTのトークンを設定
 device_read，device_sound_effectに仮想オーディオデバイスを設定
 bouyomichan_pathに棒読みちゃんの実行ファイルのパスを指定してください。
 (\はエスケープシーケンスとなるためC:\\Programe Files\\のように\を\\にしてください。じゃないと例外が)
+Rein.zipに入っているREADME.txtを見るとちゃんと表示されるかも!
 
 config.jsonの編集が完了したらRein.exeを実行しBOTがログインされているかを確認してください。
 
