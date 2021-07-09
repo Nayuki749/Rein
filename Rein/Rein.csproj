@@ -258,7 +258,7 @@
   </Target>
   <Target Name="DebugAfterBuild">
     <ItemGroup>
-      <DebugConfigFiles Include="$(SolutionDir)config.debug.json" />
+      <DebugConfigFiles Include="$(SolutionDir)Rein\config.debug.json" />
       <DebugConfigFilesDest Include="$(TargetDir)config.json" />
     </ItemGroup>
     <Copy SourceFiles="@(DebugConfigFiles)" DestinationFiles="@(DebugConfigFilesDest)" />
